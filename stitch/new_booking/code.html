@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Booking - Railway Coolie Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c76005",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23180f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">New Booking</h2>
+</div>
+</header>
+<main class="flex-1 w-full max-w-md mx-auto pb-32">
+<!-- Title Section -->
+<div class="px-4 pt-6 pb-2">
+<h3 class="text-3xl font-bold tracking-tight">Enter details</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Book a coolie for your journey</p>
+</div>
+<form class="space-y-2 mt-4">
+<!-- Train Number -->
+<div class="px-4 py-3">
+<label class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">train</span>
+<p class="text-sm font-semibold uppercase tracking-wider opacity-80">Train Number</p>
+</div>
+<input class="form-input flex w-full rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-[#352518] focus:border-primary focus:ring-0 h-16 px-5 text-lg font-medium placeholder:text-slate-400 dark:placeholder:text-[#ccab8e]" placeholder="e.g. 12951" type="number"/>
+</label>
+</div>
+<!-- Coach Number -->
+<div class="px-4 py-3">
+<label class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">grid_view</span>
+<p class="text-sm font-semibold uppercase tracking-wider opacity-80">Coach Number</p>
+</div>
+<input class="form-input flex w-full rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-[#352518] focus:border-primary focus:ring-0 h-16 px-5 text-lg font-medium placeholder:text-slate-400 dark:placeholder:text-[#ccab8e]" placeholder="e.g. B2" type="text"/>
+</label>
+</div>
+<!-- Platform Number -->
+<div class="px-4 py-3">
+<label class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<p class="text-sm font-semibold uppercase tracking-wider opacity-80">Platform Number</p>
+</div>
+<input class="form-input flex w-full rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-[#352518] focus:border-primary focus:ring-0 h-16 px-5 text-lg font-medium placeholder:text-slate-400 dark:placeholder:text-[#ccab8e]" placeholder="e.g. 4" type="number"/>
+</label>
+</div>
+<!-- Luggage Weight -->
+<div class="px-4 py-3">
+<label class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">luggage</span>
+<p class="text-sm font-semibold uppercase tracking-wider opacity-80">Luggage Weight (kg)</p>
+</div>
+<div class="relative">
+<input class="form-input flex w-full rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-[#352518] focus:border-primary focus:ring-0 h-16 px-5 text-lg font-medium placeholder:text-slate-400 dark:placeholder:text-[#ccab8e]" placeholder="e.g. 25" type="number"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 font-bold">KG</span>
+</div>
+</label>
+</div>
+</form>
+<!-- Dynamic Pricing Display -->
+<div class="mx-4 mt-8 p-6 rounded-3xl bg-primary/10 border-2 border-dashed border-primary/30 flex items-center justify-between">
+<div>
+<p class="text-sm font-medium text-primary uppercase tracking-widest">Estimated Price</p>
+<p class="text-4xl font-black mt-1">₹150.00</p>
+</div>
+<div class="size-14 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 p-6 safe-area-bottom">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg h-16 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+                Proceed to Pay
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- iOS Indicator Spacer -->
+<div class="h-4"></div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baggo - Railway Coolie Booking Platform</title>
+<!-- Fonts: Public Sans for body, Oxanium for Headline -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&amp;family=Oxanium:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c76005",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23180f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "headline": ["Oxanium", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">luggage</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-xl font-black leading-tight tracking-[-0.015em] flex-1 text-center font-headline uppercase">
+                Baggo
+            </h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-gray-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- HeroSection -->
+<section class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-6 text-center relative overflow-hidden" data-alt="Modern high speed train blurred in motion background" style='background-image: linear-gradient(rgba(35, 24, 15, 0.7) 0%, rgba(35, 24, 15, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGIstc-szIWy8K3VVqHGCtyqrHvQwJq8MiCvTO3V7vz-lB07OK9OYhQgAdXcE2Z3EqjCnvRvd8rAQKwqVUQc2CfioR-_nidxrQK1HTH_RoeDPPBiPs66ZgPhVVfVn7nbLz_4b2J9BxO-St5aLShgDVy6f3YOuAGK45dnwTM9O0AziiHWhuNwYq4vWcLVCelZKNYG1WMMW1gOXoalxTUrUxMWyFFnNyL6h1deTM3xKTcTc9BueMHaWj-R0oQRZ-QdXoc683TnS4zD0");'>
+<div class="flex flex-col gap-4 max-w-[320px] @[480px]:max-w-[600px]">
+<h1 class="text-white text-5xl font-extrabold leading-[1.1] tracking-tight @[480px]:text-6xl font-headline uppercase">
+                                Say Goodbye to Luggage Hassles
+                            </h1>
+<h2 class="text-gray-300 text-base font-normal leading-normal @[480px]:text-lg">
+                                Book verified railway coolies in seconds and travel with ease across all major Indian stations.
+                            </h2>
+</div>
+<div class="flex flex-col w-full gap-3 mt-4 @[480px]:flex-row @[480px]:justify-center">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 border-2 border-white/20 bg-white/10 backdrop-blur-sm text-white text-base font-bold leading-normal tracking-wide hover:bg-white/20 transition-all">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SectionHeader -->
+<section class="mt-8">
+<div class="flex flex-col items-center gap-1 px-4">
+<span class="bg-primary/10 text-primary text-[10px] uppercase tracking-[0.2em] font-black px-3 py-1 rounded-full">Process</span>
+<h2 class="text-gray-900 dark:text-white text-2xl font-black font-headline">HOW IT WORKS</h2>
+</div>
+</section>
+<!-- TextGrid -->
+<section class="p-4">
+<div class="flex flex-col gap-4">
+<!-- Step 1 -->
+<div class="flex items-center gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 shadow-sm">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">calendar_add_on</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">Book</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-normal">Enter your station name, train number, and coach details.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 shadow-sm">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">Get Confirmed</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-normal">Receive porter details, photo ID, and a secure OTP instantly.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 p-5 shadow-sm">
+<div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">sentiment_very_satisfied</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">Travel Stress-Free</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-normal">Hand over your luggage at the platform and pay after delivery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTASection -->
+<section class="@container mt-8 mb-12">
+<div class="mx-4 rounded-3xl bg-primary p-8 text-center flex flex-col items-center gap-6 shadow-2xl shadow-primary/30">
+<div class="flex flex-col gap-3">
+<h2 class="text-white text-3xl font-black leading-tight font-headline uppercase">
+                            Ready to start?
+                        </h2>
+<p class="text-white/90 text-base font-medium">Join 50,000+ travelers who trust Baggo for their railway journeys.</p>
+</div>
+<button class="flex w-full max-w-[280px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-6 bg-white text-primary text-base font-black leading-normal tracking-wide hover:bg-gray-100 transition-colors uppercase">
+<span class="truncate">Get Started Now</span>
+</button>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2">
+<img alt="user avatar" class="size-8 rounded-full border-2 border-primary" data-alt="User profile avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQjBKKV8l5wy9zFwQQK9JLJCpnBZB2TWTEWrG1K1wMryB48XjJMoUyfC5JBWpsG-mML_lAyykR4JJz9cKKa2xXVx-UEk03qFOK31EU6jFB1XBDf0bwUZwEo65c19REIXJlnQmsxUNEVwaLOmikRUKdLQzyQLol5S7dM98993Do_juWyzI3LkDZH8LYkvCmusWgaoGTtWiDFB-LaZVXDCat80L3kSjTDZ06Me6G-7BfrcBF3vuNUKQHdyaBKmSZXFN4IY7qIQuWF1U"/>
+<img alt="user avatar" class="size-8 rounded-full border-2 border-primary" data-alt="User profile avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzSsgQjVAH0RrcASQsmX44g8c9DeMXf76ifexWM99p_oEMNFVXUc87L7m0j7Mz5qtmnEiJyHkma345t8re2gzjMwvkVIuuEyREI8MH2JGLiiAJ07HqE8kijOV_zrvPgaH5SCTph_2shc2xQxfJwwzQ2K4170o23pG32vqstxrLhP9OO9zaidWwRr5zWjSbLlm6be1EZbvehF0MucZ6JVAfDIlLAU0iPJFD8h2Tx_J0TbzCBxqhYRA3G6qjW8iVxasMYkZ6ZEeY3zc"/>
+<img alt="user avatar" class="size-8 rounded-full border-2 border-primary" data-alt="User profile avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvGN3D7-hFODARMaTv33QHK0gX18hbYHn81q46Dbw58EqIJ56BUK7GA98if_ORgJVOY-x2mvgGwJc06k8xNWX4uZXDRufIx49-8CFlvcUlV2HKvnT4JcIRo2RVuxSf80rKTSojYofw5yJPe8wEjQu9ao7IMqnQxLBeJmTfvdm8iKatSP6QpvF2F-snetdlBYx5hg3jeO0n7srIqXkeAldYnapdJdMyOdFDsB_vuvKnU3RRnCXDgUsnEO_l61kg25Dzf5ZCC_agm84"/>
+</div>
+<span class="text-xs text-white/80 font-bold">Rated 4.9/5 by users</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Area -->
+<footer class="p-6 border-t border-gray-200 dark:border-white/10 text-center">
+<p class="text-gray-500 dark:text-gray-500 text-xs">© 2024 Baggo Technologies. All rights reserved.</p>
+<div class="flex justify-center gap-4 mt-3">
+<a class="text-gray-400 text-xs" href="#">Privacy Policy</a>
+<a class="text-gray-400 text-xs" href="#">Terms of Service</a>
+</div>
+</footer>
+</div>
+</body></html>

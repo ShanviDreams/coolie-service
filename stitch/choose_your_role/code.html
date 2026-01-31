@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Choose Your Role - Baggo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c76005",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23180f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Top Navigation Area -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="p-2">
+<span class="material-symbols-outlined text-white">chevron_left</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Baggo</h2>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+<!-- Progress Indicator -->
+<div class="px-6 py-2 flex gap-2 justify-center">
+<div class="h-1 w-8 rounded-full bg-primary"></div>
+<div class="h-1 w-8 rounded-full bg-primary/20"></div>
+<div class="h-1 w-8 rounded-full bg-primary/20"></div>
+</div>
+<!-- Headline Section -->
+<div class="mt-8">
+<h2 class="text-white tracking-light text-[32px] font-bold leading-tight px-6 text-center">Choose Your Role</h2>
+<p class="text-[#ccab8e] text-base font-normal leading-normal px-8 text-center mt-2">Tell us how you'll be using Baggo today.</p>
+</div>
+<!-- Role Selection Cards -->
+<div class="flex-1 px-4 py-8 space-y-4">
+<!-- Passenger Card -->
+<div class="group relative p-4 rounded-xl bg-[#352518] border-2 border-transparent hover:border-primary transition-all cursor-pointer shadow-lg active:scale-95">
+<div class="flex flex-col gap-4">
+<div class="w-full h-40 bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden relative" data-alt="Modern train station platform with passengers waiting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjRnb9Qe436hKPlLkK0VPjyUPpjG8jzWfrSERccieL81F9EnPaI0pDv4qObHZrubiMF6FSxYR8Azu9EBakk-pu5hW5AHTiZVz0ecerjJ26qxhiEUXAfnpz8lScfZKCJpMcnsJERD_VB-Kh89yB9_w4BxYns5Qtin6QJC66Sxz5bKVEN_tHXJAw_R0ieW8WB4_sC6SmYAutVxjobFZvA_PoYq-yZV8i0e6w-OfSHDRntx85XLSW96wj-V5LqcRlmQOmSSy-C3_mMpA");'>
+<div class="absolute top-3 left-3 bg-primary p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">luggage</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<p class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Passenger</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">check_circle</span>
+</div>
+<p class="text-[#ccab8e] text-sm font-normal leading-snug">Book a porter and track your luggage in real-time. Travel stress-free.</p>
+</div>
+</div>
+</div>
+<!-- Coolie / Porter Card -->
+<div class="group relative p-4 rounded-xl bg-[#352518] border-2 border-transparent hover:border-primary transition-all cursor-pointer shadow-lg active:scale-95">
+<div class="flex flex-col gap-4">
+<div class="w-full h-40 bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden relative" data-alt="Staff member assisting with luggage service" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXubIe7_ZTnGzgp1Mc3gnoqLpS1ODAmqwh36HUUg521b0SmgOW-VGV8SOD9noBWeOBoATUs8fHoCpDTj87P7a7dH39pPCxd3KF6Tlr0sSnbLQlNFOqc8BdY0rh_Rzv1JfQaqvsVKaM7BfUldOyzRr0uvshI2op0WZkUaK-ziz55-klDO1RW7YkjziNIqS-SCKqIleotS4OINfpojmVTlBxPhMx0A-7yrC8aY3juLX8w_Grc3-byQplJyzTJZTf9_siNm4m8xiMSeI");'>
+<div class="absolute top-3 left-3 bg-primary p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">engineering</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<p class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Coolie</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">check_circle</span>
+</div>
+<p class="text-[#ccab8e] text-sm font-normal leading-snug">Accept luggage requests, assist travelers, and manage your daily earnings.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="p-6 bg-[#23180f]/80 backdrop-blur-md sticky bottom-0 border-t border-white/5">
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-4 bg-primary text-white text-lg font-semibold shadow-xl active:opacity-90">
+<span class="truncate">Continue</span>
+</button>
+<p class="text-white/40 text-[10px] text-center mt-4 uppercase tracking-widest font-medium">Step 1 of 3</p>
+</div>
+</div>
+</body></html>

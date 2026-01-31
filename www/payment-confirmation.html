@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Payment Confirmation - Baggo</title>
+    <!-- Fonts: Public Sans for body, Oxanium for Headline -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+    <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 ios-blur flex items-center p-4 border-b border-slate-200 dark:border-white/10">
+<a href="new-booking.html" class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</a>
+<h1 class="flex-1 text-center text-lg font-bold tracking-tight">Payment Confirmation</h1>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Section: Booking Summary -->
+<section class="mt-6">
+<div class="px-4 pb-2">
+<h3 class="text-lg font-bold tracking-tight">Booking Summary</h3>
+</div>
+<div class="px-4">
+<div class="flex flex-col @container items-stretch justify-start rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] bg-white dark:bg-[#352518] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Modern Indian railway station platform with high speed train" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGCitihgfEnXfFLv_Io-H9boOgPIr7gbc1sEiNYKWQ7Zp8EqEY7X3rM-4587mFM0J0gtLaijc3cGEo8F33rJYNpEbyBzFNvWEDbDpQO1QaWIwI7eK5BeLA06FAbbngaKuFKzLV4Y-U3SRiEwmo7gWBPsxgwbf8fRXMMTefGktogZno_T6d2wWCvvA3cqXDoW_u9nXIWiFKP6cflb9f1utLH7sDYdtOeRMx83ALwuJTEVHwtbVPOL3zn4zn8qOAqXdMTln0rXtzB6U");'>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-5 px-5">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">train</span>
+<p class="text-sm font-semibold uppercase tracking-wider">Premium Express</p>
+</div>
+<h4 class="text-xl font-bold leading-tight tracking-tight">Shatabdi Express (12002)</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">location_on</span>
+<p class="text-slate-500 dark:text-[#ccab8e] text-base font-normal">Platform 4 • New Delhi Stn.</p>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-slate-400 text-[18px]">schedule</span>
+<p class="text-slate-500 dark:text-[#ccab8e] text-base font-normal">Today, 10:30 AM • Main Entrance</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Price Details -->
+<section class="mt-8 px-4">
+<div class="rounded-2xl bg-slate-100 dark:bg-white/5 p-5">
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-slate-500 dark:text-[#ccab8e] text-sm font-medium">Service Subtotal</p>
+<p class="font-semibold text-sm text-right">₹300.00</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-slate-500 dark:text-[#ccab8e] text-sm font-medium">Platform Fee</p>
+<p class="font-semibold text-sm text-right">₹20.00</p>
+</div>
+<div class="h-[1px] bg-slate-200 dark:bg-white/10 my-3"></div>
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-lg font-bold">Total Price</p>
+<p class="text-primary text-xl font-extrabold text-right">₹320.00</p>
+</div>
+</div>
+</section>
+<!-- Simulated Status (Hidden by default or shown after interaction) -->
+<section class="mt-8 px-4">
+<div class="flex flex-col items-center justify-center p-8 rounded-2xl bg-primary/10 border border-primary/20">
+<div class="relative size-12 flex items-center justify-center mb-4">
+<div class="absolute inset-0 border-4 border-primary/20 rounded-full"></div>
+<div class="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+<span class="material-symbols-outlined text-primary">person_search</span>
+</div>
+<p class="text-primary font-bold text-center">Waiting for Coolie Confirmation...</p>
+<p class="text-slate-500 dark:text-[#ccab8e] text-xs text-center mt-2 max-w-[240px]">
+                    Your request has been sent to the nearest porters at Platform 4.
+                </p>
+</div>
+</section>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-white/10 pb-8">
+<div class="max-w-screen-sm mx-auto flex flex-col gap-3">
+<div class="flex items-center justify-center gap-2 mb-2">
+<span class="material-symbols-outlined text-slate-400 text-[16px]">verified_user</span>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Secure Payment via BaggoPay</p>
+</div>
+<a href="booking-status.html" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="truncate">Pay Now • ₹320.00</span>
+</a>
+</div>
+</footer>
+</body>
+</html>

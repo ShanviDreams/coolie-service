@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baggo Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c76005",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23180f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-white overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 shrink-0 items-center justify-center bg-primary rounded-full">
+<span class="material-symbols-outlined text-white">dashboard_customize</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 ml-3 dark:text-white">Baggo Admin</h1>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full border-2 border-primary bg-cover bg-center" data-alt="Admin profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqyxuTN21x-ub1GqwTysupPRHrQqNkO_NC8eVXNkLL5yVtv9Q1vPLaTA6rqz2rvJ1XHMOaKRFiDL-etKeT7wKckzH0lGHYYYIYTPMpj4R16y_PT_81mr1-Jx5q8HGW-zEmwDjdb8bZZLyezPUcZ8BW41f6mdeYT59rV7ndOh-p37eTGoLSnTeOLXNDErRM3WhPiSnhowFJS9W0ZygpamxqjAJ7nklXAsJ_M9xYDS1str2ex7PWuNhwXlzxGoSvGr9URXr6Xdfdi_U");'></div>
+</div>
+</div>
+<!-- Tabs Section -->
+<div class="px-4">
+<div class="flex overflow-x-auto no-scrollbar gap-6 border-b border-gray-200 dark:border-gray-800">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-wide">Verification</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 pb-3 pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-wide">All Bookings</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 pb-3 pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold tracking-wide">Complaints</p>
+</a>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Stats Cards -->
+<div class="flex gap-4 p-4 overflow-x-auto no-scrollbar">
+<div class="flex min-w-[160px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Total Bookings</p>
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+</div>
+<p class="text-2xl font-bold leading-tight">1,284</p>
+<p class="text-green-500 text-xs font-bold">+12% vs last week</p>
+</div>
+<div class="flex min-w-[160px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wider">Pending</p>
+<span class="material-symbols-outlined text-yellow-500 text-sm">hourglass_empty</span>
+</div>
+<p class="text-2xl font-bold leading-tight">24</p>
+<p class="text-green-500 text-xs font-bold">+5% New Apps</p>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-gray-400">search</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-xl border-none bg-white dark:bg-white/5 dark:text-white placeholder:text-gray-400 focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search ID, name or status..." type="text"/>
+<button class="absolute right-2 size-8 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-white/10 text-gray-500">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pt-6 pb-2">
+<h3 class="text-lg font-bold tracking-tight">Verification Queue</h3>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<!-- Data List / Table Equivalent -->
+<div class="px-4 space-y-4">
+<!-- User Record Card 1 -->
+<div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-cover bg-center" data-alt="Portrait of a service provider applicant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABlg8zXGYKzkSV0G07QfMP9xom3EkXaCDC7roG7h9uoWIGo6Jon-trt5pmItz12IC0ZsM5SmYgDE1zH92UKs4avbfvh-2IIQ1YGDH-MAqOKYJuCZR7bog3nydnrMiEUeApHCWh16STcE1GRitPzz50Uyp4CxUwQvpeJcxQ315cf9V-TMjbnuwBUPjeF-OE3Ld8Ix6mFNBLGf2r8CgIWuZEP5KTW-_cm4YkwDd45HtWbwTwRxLDxkp_O_HOe1cyI7Uu98sMQqu2fuU");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-base">Rahul Sharma</h4>
+<p class="text-gray-500 text-xs font-medium">ID: #BG-98231</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-500 border border-yellow-200 dark:border-yellow-500/30">Pending</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex gap-2">
+<button class="flex-1 h-10 rounded-full bg-primary text-white text-sm font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span> Approve
+                    </button>
+<button class="flex-1 h-10 rounded-full bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white text-sm font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">info</span> Details
+                    </button>
+</div>
+</div>
+<!-- User Record Card 2 -->
+<div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 rounded-xl p-4 shadow-sm opacity-90">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-cover bg-center" data-alt="Portrait of a female provider applicant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMs175UzOM0yT0xR0l0FNTpxw1AJNnZlpn43xaZ86B_bjfDKeeGgy60F0xRj34rpvFqRO87vmvmEznTNvXqihSCLGzy32fs4_2EjGxpNG14byA2Trynyfc3dUZytKqfTimYQXHeojh7OD5hK6IVwDf9naX4Lw3wRvpbmYNerMUx10gC53Lc0EJiS68wyHZuq41-YNZXiEHN5eMCQKsZJiQN-i5qcqxHT1B28EzOIPfXiEPvtqFB9PznOS3DIFlqsfYdM6oRnW0PSw");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-base">Anita Desai</h4>
+<p class="text-gray-500 text-xs font-medium">ID: #BG-98245</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-400 border border-red-200 dark:border-red-500/30">Flagged</span>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<p class="text-xs text-red-500 flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">warning</span> Document mismatch detected
+                    </p>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex gap-2">
+<button class="flex-1 h-10 rounded-full bg-gray-800 text-white text-sm font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">edit</span> Review Case
+                    </button>
+</div>
+</div>
+<!-- User Record Card 3 (Verified) -->
+<div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 rounded-xl p-4 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-cover bg-center" data-alt="Portrait of a service provider" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLsMNvNX9sqZXThJZnebWrnqoSZhH0_HPjlqXU6426nki2_DJXQdzqqRQT6dMThoCgDJ3wOeRW-J7RPhKA2KYXLZwhKA6ee7KXxmE57FBDWp93Qnpxf0mWfkS5e0ymWCJJN9g5DCSeKWBCvGdiRHbzfCSJmRmrMO6dR2zi_cRoXUjx8qgPHxI65mI9_7abptg-ObL3EXV5hyfLKYDHLtubWE55BcoX482H7Kxfzk49CtUy1Q8uWiC2lXnf2mejefQqKV1lmBzdVKg");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-base">Arjun Mehra</h4>
+<p class="text-gray-500 text-xs font-medium">ID: #BG-97120</p>
+</div>
+<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-500 border border-green-200 dark:border-green-500/30">Verified</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-center px-2">
+<div class="text-center">
+<p class="text-[10px] text-gray-400 uppercase">Rating</p>
+<p class="text-sm font-bold">4.8 ★</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-gray-400 uppercase">Trips</p>
+<p class="text-sm font-bold">142</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-gray-400 uppercase">Status</p>
+<p class="text-sm font-bold text-green-500">Active</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Complaints Section Preview -->
+<div class="flex items-center justify-between px-4 pt-8 pb-2">
+<h3 class="text-lg font-bold tracking-tight">Recent Complaints</h3>
+<span class="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">3 NEW</span>
+</div>
+<div class="px-4 pb-12">
+<div class="bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4 border-b border-gray-100 dark:border-gray-800">
+<div class="flex justify-between mb-1">
+<span class="text-xs font-bold text-gray-400">#C-1102 - 10m ago</span>
+<span class="text-xs font-bold text-primary">High Priority</span>
+</div>
+<p class="text-sm font-medium leading-relaxed">User reported unprofessional behavior during luggage handling at terminal 2.</p>
+<div class="mt-3 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="size-6 rounded-full border-2 border-white dark:border-gray-900 bg-cover" data-alt="Avatar 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEckZq8wHedXjVNpdX4qt6kZYrSiRKyF-CvYbP1lBzyFEoBNWPmKQz5JnQmBT_84xbD5WJJ9DlsLN1gM_Ol6lJmTIiIrS3Hfy507IULuYyIWTTrPdOz3Lc1EHziB-iF_rTGrKdj-lamkY8CwtekhAr037ipno0ewNchWFzO5InoiPgsu9uCknGG5vsGajZob2AvpVDtocAnksxwjXZ2jjfiimOOumURLLRI3DOqTeKEVdiSZL1zNxNT6vB2rS9XZ3a7sxXNlgNihY");'></div>
+<div class="size-6 rounded-full border-2 border-white dark:border-gray-900 bg-cover" data-alt="Avatar 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6assiRVV7pvLz2M8bMgqNy6Yutd6WY3XnR34ILrYvi43Rv5EZf5kan6AvzjfafJQLdf5LfyvHdLUwfMG3DI0tvaBF4W0hQeywCGT9qwsrOeE5R5W-x8LEzIfaPI_ftWNvesJtoWO5MsdBBMpaK8GZ6tf5XJwyOnJF_WIESv6L2DQ1-dvLTmb2CN1Zn5h1KRIcrwkzMv51MYY3XfES1VIAHdufnhRacj07rIOj-G5ohIQOU7IgFySHnSCG8riYcd56u0yeEG94ODM");'></div>
+</div>
+<button class="text-xs font-bold flex items-center gap-1 text-primary underline">Assign to Agent</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 size-14 rounded-full bg-primary text-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+<!-- Bottom Navigation (Mobile Native feel) -->
+<nav class="fixed bottom-0 w-full max-w-md left-1/2 -translate-x-1/2 bg-white/90 dark:bg-background-dark/95 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 px-6 py-3 flex justify-between items-center z-40">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+<span class="text-[10px] font-bold">Overview</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-bold">Users</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined text-2xl">receipt_long</span>
+<span class="text-[10px] font-bold">Ledger</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-[10px] font-bold">Config</span>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

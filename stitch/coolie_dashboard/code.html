@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coolie Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c76005",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23180f",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-white">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-6 pb-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Professional portrait of a male worker" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnnr-fEyb4isQgDT9B84yRbG3MFA0Y5sk8GixsAhJ9NM8uNFTaQyUSNqwitpFt99kONNOlxRxqjeWulaZUWC_SmkBI-rhNS34yj4rfoHnj8rc5tZYMBMDWqTqctZVtkam6PtU4MLrZKWg8x3-TJ0eglNeRgABApbrT1XbIbW1-qdqkJ-AKkaR4o-gfMsA5PdL9HLzPDuw5D0ATcSOD9h4oO5WRqjP6Kwgq4hFIyxMohuzGiJOFHnHGYue0jTos3Jp_UD9C_gciEOw");'>
+</div>
+<div>
+<h1 class="text-lg font-extrabold tracking-tight">Rajesh K.</h1>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">star</span>
+<span class="text-xs font-semibold text-primary">4.9 (128 jobs)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-white/10 text-primary dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Availability Action Panel -->
+<div class="px-4 py-4">
+<div class="flex items-center justify-between p-5 rounded-xl border border-primary/20 bg-white dark:bg-[#2d1f14] shadow-sm">
+<div class="flex flex-col gap-1">
+<p class="text-sm font-bold uppercase tracking-wider text-primary/80">Current Status</p>
+<p class="text-xl font-extrabold">Online &amp; Ready</p>
+<p class="text-xs text-slate-500 dark:text-[#ccab8e]">Waiting for new requests near you</p>
+</div>
+<label class="relative flex h-[34px] w-[60px] cursor-pointer items-center rounded-full bg-slate-200 dark:bg-[#4a3421] p-1 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all duration-300">
+<div class="h-full aspect-square rounded-full bg-white shadow-lg" style="box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto no-scrollbar">
+<div class="flex-1 min-w-[120px] bg-white dark:bg-[#352518] p-3 rounded-lg border border-slate-100 dark:border-white/5">
+<p class="text-[10px] uppercase font-bold text-slate-400 dark:text-[#ccab8e]">Today</p>
+<p class="text-lg font-bold">$142.50</p>
+</div>
+<div class="flex-1 min-w-[120px] bg-white dark:bg-[#352518] p-3 rounded-lg border border-slate-100 dark:border-white/5">
+<p class="text-[10px] uppercase font-bold text-slate-400 dark:text-[#ccab8e]">Hours</p>
+<p class="text-lg font-bold">5.2h</p>
+</div>
+<div class="flex-1 min-w-[120px] bg-white dark:bg-[#352518] p-3 rounded-lg border border-slate-100 dark:border-white/5">
+<p class="text-[10px] uppercase font-bold text-slate-400 dark:text-[#ccab8e]">Completed</p>
+<p class="text-lg font-bold">8 Jobs</p>
+</div>
+</div>
+<!-- Tabs Container -->
+<div class="px-4 pb-2">
+<div class="flex bg-slate-100 dark:bg-[#1a120b] p-1 rounded-full">
+<button class="flex-1 py-2 text-sm font-bold rounded-full bg-white dark:bg-primary text-slate-900 dark:text-white shadow-sm">
+                Booking Requests
+            </button>
+<button class="flex-1 py-2 text-sm font-bold text-slate-500 dark:text-[#ccab8e]">
+                My Jobs
+            </button>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pt-4 pb-2">
+<h3 class="text-lg font-extrabold tracking-tight">Active Requests (3)</h3>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full">Nearby</span>
+</div>
+<!-- Requests List -->
+<div class="px-4 space-y-4 pb-24">
+<!-- Request Card 1 -->
+<div class="flex flex-col bg-white dark:bg-[#352518] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-white/5">
+<div class="relative h-32 w-full">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Aerial view of airport terminal map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9rp6omPFaKzS43GRs1njb2OsCE9NgyLi5zq0IRIOvG1GDFt16LIv-cOb8kuR-BHC-77S-weC0zeGFXhm-0W5-J6ZkTtg-a95u5gj0kAe1yjaIpqjRz3ajNwickTL_8VloyYujJI71Wyfr102Fqb_zpyjBse5Jt9YHoteXAsGeDtXOXL3SvnqCTQX3vSYIX5S3T2F3PuYm0J2GDNqyS5O707GY2QUGTBY1GK6P28_gtuupMJvcNfUQnS1LaXaqlPN32QAC--93Hn4");'>
+</div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/80 backdrop-blur px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+<span class="text-[10px] font-bold">350m away</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Terminal 3 → Exit B</p>
+<h4 class="text-lg font-bold leading-tight">Sarah Jenkins</h4>
+</div>
+<p class="text-xl font-black text-primary">$18.50</p>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-[#ccab8e] text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">luggage</span>
+<span>3 Bags</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>~15 min</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-11 bg-primary hover:bg-primary/90 text-white font-bold rounded-full transition-colors">
+                        Accept Request
+                    </button>
+<button class="size-11 flex items-center justify-center border border-slate-200 dark:border-white/10 rounded-full text-slate-400">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="flex flex-col bg-white dark:bg-[#352518] rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-white/5 opacity-90">
+<div class="relative h-32 w-full">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Map view of a train station platform" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfaaYg9DSCYA0S9u7q4KURzswBk2g_5hjbvWtDKUOOaJ5P2cfX3wiGcstDL8BEFbI8vxArx0WWKyW3Jz8B3JsTltrQJ9v-MrS6yAcS4GqbvPiPrAr0SiT39ltWlVThdMIZYZ9ilVi3wK0zn1aJerAi8qxeJ8vFW5565e8GeLa2O5E1eg4YVo4c2YiLUMFpy1NQBbtcsrn7BTPsMQHz4zm165n1TMSSL-iv0-vYZvwADemp_4xDpvQTOXb1PYrs7cVQBSw8-pqbLAM");'>
+</div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/80 backdrop-blur px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+<span class="text-[10px] font-bold">1.2km away</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Platform 4 → Taxi Stand</p>
+<h4 class="text-lg font-bold leading-tight">Michael Thorne</h4>
+</div>
+<p class="text-xl font-black text-primary">$12.00</p>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-[#ccab8e] text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">shopping_cart</span>
+<span>1 Large Chest</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>~8 min</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-11 bg-primary hover:bg-primary/90 text-white font-bold rounded-full transition-colors">
+                        Accept Request
+                    </button>
+<button class="size-11 flex items-center justify-center border border-slate-200 dark:border-white/10 rounded-full text-slate-400">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Request Card 3 (Compact Version) -->
+<div class="flex items-center gap-4 bg-white dark:bg-[#352518] p-4 rounded-xl shadow-sm border border-slate-100 dark:border-white/5">
+<div class="size-16 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">luggage</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<h4 class="font-bold">VIP Lounge Pickup</h4>
+<span class="text-primary font-black">$25.00</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-[#ccab8e]">5 Bags • Group of 4 people</p>
+<div class="mt-2 flex gap-2">
+<button class="text-xs font-bold text-primary">View Details</button>
+<button class="text-xs font-bold text-slate-400">Ignore</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="fixed bottom-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-100 dark:border-white/5 px-6 pt-3 pb-8 flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-bold">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Earnings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</button>
+</div>
+</body></html>
