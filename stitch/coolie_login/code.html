@@ -56,11 +56,19 @@
 <div class="size-12"></div> <!-- Spacer for centering -->
 </div>
 <!-- Hero Illustration / Branding -->
-<div class="px-4 pt-4">
-<div class="w-full h-48 rounded-xl bg-gradient-to-br from-primary/30 to-background-dark/80 relative overflow-hidden flex items-center justify-center">
-<span class="material-symbols-outlined text-[120px] text-primary/40 absolute -bottom-4 -right-4">luggage</span>
-<div class="relative z-10 text-center">
-<span class="material-symbols-outlined text-primary text-6xl">badge</span>
+<!-- Action Button -->
+<div class="px-4 pt-6 pb-4">
+  <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+    <span>Login</span>
+    <span class="material-symbols-outlined">login</span>
+  </button>
+
+  <!-- 🔽 ADD THIS BUTTON (NEW LINE) -->
+  <button id="googleLogin"
+    class="mt-4 w-full border border-neutral-300 dark:border-[#6a4b2f] text-neutral-900 dark:text-white py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-neutral-100 dark:hover:bg-[#352518]">
+    <span class="material-symbols-outlined">account_circle</span>
+    <span>Sign in with Google</span>
+  </button>
 </div>
 </div>
 </div>
@@ -115,4 +123,35 @@
 <!-- iOS Home Indicator Space -->
 <div class="h-8"></div>
 </div>
-</body></html>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCbfSgHvtfzbsKgHpihSrJdE8ZB5u2dYXw",
+    authDomain: "project-1-65dc6.firebaseapp.com",
+    projectId: "project-1-65dc6",
+    storageBucket: "project-1-65dc6.appspot.com",
+    messagingSenderId: "113313921609",
+    appId: "1:113313921609:web:ef3df75375d8d255de1d98"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  document.getElementById("googleLogin").addEventListener("click", () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log("User signed in:", result.user);
+        alert("Login successful");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error.message);
+      });
+  });
+</script>
+
+</body>
+</html>
